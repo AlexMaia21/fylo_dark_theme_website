@@ -1,0 +1,63 @@
+footer {
+	padding: 0 80px;
+	min-height: 350px;
+	background-color: $darkblue-footer;
+	@include display-flex(center);
+	flex-direction: column;
+	div.logo-footer img {width: 120px; margin-top: 60px; margin-bottom: 15px;}
+	div.info-footer {
+		@include display-flex(space-between);
+		height: auto;
+		div.text-footer {
+			max-width: 330px;
+			display: flex;
+			img {width: 20px; height: 20px;}
+			p {margin-left: 10px;}
+		}
+		ul.contact {
+			li {
+				img {margin-right: 10px;}
+				color: #fff;
+				@include display-flex(flex-start, center);
+				margin-bottom: 10px;
+			}
+		}
+		nav.menu-footer {
+			@include display-flex(space-between);
+			width: 200px;
+			ul li {margin-bottom: 10px;}
+			ul li a:hover{font-weight: bold;}
+		}
+		div.socials {
+			i.fab {
+				margin-left: 15px;
+				color: #fff;
+				font-size: 1.2em;
+				border: 1px solid #fff;
+				padding: 7px 7px 6px 7px;
+				border-radius: 50%;
+				&:hover {color: $blue;}
+			}
+		}
+	}
+	@media(max-width: 625px){
+		padding: 100px 15px 10px 15px;
+	}
+	@media(max-width: 900px){
+		padding-top: 100px;
+		@include display-flex();
+		div.info-footer {
+			min-height: 400px;
+			@include display-flex(space-between, flex-start);
+			flex-direction: column;
+			ul.contact {margin: 10px 0;}
+			nav.menu-footer {
+				flex-direction: column;
+				ul {margin: 20px 0;}
+			}
+			div.socials {
+				margin: 0 auto;
+			}
+		}	
+	}
+}

@@ -1,0 +1,25 @@
+header {
+	height: 120px;
+	padding: 0 50px;
+	@include display-flex(space-between, center);
+	div.logo img {width: 120px;}
+	nav {
+		width: 300px;
+		ul {
+			@include display-flex(space-between, center);
+			width: 100%;
+			li a:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	@media(max-width: 625px){
+		height: 80px;
+		padding: 0 20px;
+		div.logo img {width: 80px;}
+		nav {
+			margin-left: 10px;
+			max-width: 190px;
+		}
+	}
+}

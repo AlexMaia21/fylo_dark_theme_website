@@ -1,0 +1,21 @@
+@import 'default';
+
+@media(max-width: 625px){
+	body {font-size: 13.5px;}
+}
+
+@import 'header';
+
+@import 'section1';
+
+@import 'main';
+
+@import 'footer';
+
+// Javascript
+.erro {
+	position: absolute;
+	top: -15px;
+	left: 20px;
+	color: $light-red;
+}
